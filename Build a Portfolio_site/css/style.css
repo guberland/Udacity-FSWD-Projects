@@ -1,8 +1,8 @@
 /**********************************
  define the font used for the html
 **********************************/
-body{
-    font-family: 'Lato', sans-serif;
+body {
+    font-family: "Lato", sans-serif;
     color: #2d3c49;
 }
 
@@ -28,7 +28,13 @@ UBC logo
     flex-wrap: wrap;
 }
 
-.container{
+#footer-line {
+    height:2px;
+    background-color: #000;
+    margin:30px 0 10px 0;
+}
+
+.container {
     margin:0 auto;
     flex-wrap: wrap;
 }
@@ -37,19 +43,19 @@ UBC logo
  classes that defines the font
  properties
 **********************************/
-.text-80{
+.text-80 {
     font-size: 80px;
 }
 
-.text-thin{
+.text-thin {
     font-weight: 300;
 }
 
-.text-grey{
+.text-grey {
     color: #7d97ad;
 }
 
-.text-thick{
+.text-thick {
     font-weight: 400;
 }
 
@@ -59,20 +65,20 @@ UBC logo
 **********************************/
 @media screen and (max-width: 800px)
 {
-    #my-name{
+    #my-name {
         font-size: 60px;
     }
-    #my-title{
+    #my-title {
         font-size: 30px;
     }
 }
 
 @media screen and (max-width: 420px)
 {
-    #my-name{
+    #my-name {
         font-size: 40px;
     }
-    #my-title{
+    #my-title {
         font-size: 25px;
     }
 }

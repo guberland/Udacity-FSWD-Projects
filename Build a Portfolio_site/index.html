@@ -4,51 +4,63 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <title>Portfolio</title>
     </head>
     <body>
         <div class="container">
-            <div class="row" >
+            <header class="row" >
                 <div class="col-md-6" >
                     <img src="./img/UBC-logo.jpg" class="img-responsive" id="logo" alt="UBC-logo">
                 </div>
+
                 <div class="col-md-6 text-right text-uppercase">
                     <h1 class="text-80 text-thin" id="my-name">chao jiang</h1>
                     <h3 class="text-thick" id="my-title">Udacity FSWD student</h3>
                 </div>
-            </div>
+            </header>
+
             <div class="row">
                 <div class="col-md-12"><hr></div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <img src="img/scorched_earth.jpg" class="img-responsive" alt="background-sakura">
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="text-grey text-thick">Featured Work</h2>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-md-4">
+                <article class="col-md-4">
                     <img src="img/piano.jpg" class="img-responsive" alt="background-piano">
                     <h1 class="text-uppercase">Appify</h1>
                     <h4>http://github.com/udacity/Appify/</h4>
-                </div>
-                <div class="col-md-4">
+                </article>
+
+                <article class="col-md-4">
                     <img src="img/sunflower1.jpg" class="img-responsive" alt="background-sunflower">
                     <h1 class="text-uppercase">Sunflower</h1>
                     <h4>http://github.com/udacity/Sunflower/</h4>
-                </div>
-                <div class="col-md-4">
+                </article>
+
+                <article class="col-md-4">
                     <img src="img/bokeh.jpg" class="img-responsive" alt="background-bokeh">
                     <h1 class="text-uppercase">Bokeh</h1>
                     <h4>http://github.com/udacity/Bokeh/</h4>
-                </div>
+                </article>
             </div>
+
+            <hr id="footer-line">
+            <footer>
+                <p>&copy; 2017 Chao Jiang.</p>
+            </footer>
         </div>
     </body>
 </html>
