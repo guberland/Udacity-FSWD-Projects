@@ -1,9 +1,14 @@
-
+/**********************************
+ define the font used for the html
+**********************************/
 body{
     font-family: 'Lato', sans-serif;
     color: #2d3c49;
 }
 
+/**********************************
+ the solid line separator
+**********************************/
 hr {
     border: none;
     height: 5px;
@@ -11,12 +16,10 @@ hr {
     margin:10px 0 20px 0;
 }
 
-.container{
-    max-width:
-    margin:0 auto;
-    flex-wrap: wrap;
-}
-
+/**********************************
+ID tag that defines property of the
+UBC logo
+**********************************/
 #logo {
     max-width: 100px;
     max-height: 150px;
@@ -25,6 +28,16 @@ hr {
     flex-wrap: wrap;
 }
 
+.container{
+    max-width:
+    margin:0 auto;
+    flex-wrap: wrap;
+}
+
+/**********************************
+ classes that defines the font
+ properties
+**********************************/
 .text-80{
     font-size: 80px;
 }
@@ -41,6 +54,10 @@ hr {
     font-weight: 400;
 }
 
+/**********************************
+ Responsive design to make the text
+ adjust according to the devices
+**********************************/
 @media screen and (max-width: 800px)
 {
     #my-name{
