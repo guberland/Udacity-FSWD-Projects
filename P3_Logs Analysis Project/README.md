@@ -25,12 +25,13 @@ README.md
   https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 
 2.put the newsdata.sql extracted from downloaded zip in the same folder
-as P3_Log_Analysis.py or if you are using vagrant, place it into
-the vagrant directory
+  as P3_Log_Analysis.py or if you are using vagrant, place it into
+  the vagrant directory
 
 3.to load the data, use the command psql -d news -f newsdata.sql.
 
-4.now the tables are created and populated with data, you can view the tables using psql -d news or run the script P3_Log_Analysis.py
+4.now the tables are created and populated with data, you can view the tables using 
+  psql -d news or run the script P3_Log_Analysis.py
 
 ```
 
@@ -39,23 +40,13 @@ the vagrant directory
 ### P3_Log_Analysis.py
 
 ```
-	This file contains five functions with three of them being
-query functions.
+	This file contains three functions:
 
-	get_top_arti() select columns from log and articles table and join them
-with articles.slug and log.path to output the top three most viewed articles. 
+	executeQuery() takes an SQL query as a parameter. Executes the query and 
+	returns the results as a list of tuples
 
-	get_top_author() select columns from log,author,articles table and join
- them with articles.slug to log.path and articles.author to authors.id to output the 
-top three most viewed authors.
-
-	error_day() has two views created; normtraffic and badtraffic. normtraffic 
-provides all traffic detail on all days in log table while badtraffic provides all
-404 bad request on all days. the two table then joined to output the days that have
-more than 1% of error rate.
-
-	print_view() and print_error() are helper functions that modify the output
-of the queries into more human readable result.
+	printView() and printError() are helper functions that modify the output
+	of the queries into more human readable result.
 
 ```
 
@@ -67,7 +58,7 @@ LiClipse (python3)
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+https://github.com/guberland/Udacity-FSWD-Projects
 
 ## Authors
 
