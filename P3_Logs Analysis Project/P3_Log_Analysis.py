@@ -23,13 +23,13 @@ def executeQuery(query):
 
 
 def printView(a):
-    # print Q1 and Q2 to a more readable format
+    """ print Q1 and Q2 to a more readable format """
     for i in a:
         print(' - "{}" -- {} views'.format(i[0], i[1]))
 
 
 def printError(a):
-    # print Q3 to a more readable format
+    """ print Q3 to a more readable format """
     for i in a:
         print(' - "{}" -- {}% errors'.format(re.sub(' ', '', i[0]), i[1]))
 
