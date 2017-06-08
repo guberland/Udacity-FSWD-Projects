@@ -30,11 +30,16 @@ query functions.
 
 	get_top_arti() select columns from log and articles table and join them
 with articles.slug and log.path to output the top three most viewed articles. 
-	get_top_author() select columns from log,author,articles table and join them with articles.slug to log.path and articles.author to authors.id to output the top three most viewed authors.
+
+	get_top_author() select columns from log,author,articles table and join
+ them with articles.slug to log.path and articles.author to authors.id to output the 
+top three most viewed authors.
+
 	error_day() has two views created; normtraffic and badtraffic. normtraffic 
 provides all traffic detail on all days in log table while badtraffic provides all
 404 bad request on all days. the two table then joined to output the days that have
 more than 1% of error rate.
+
 	print_view() and print_error() are helper functions that modify the output
 of the queries into more human readable result.
 
@@ -48,7 +53,7 @@ LiClipse (python3)
 
 ## Versioning
 
-https://github.com/guberland/Udacity-FSWD-Projects
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
