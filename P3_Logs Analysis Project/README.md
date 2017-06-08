@@ -20,7 +20,19 @@ README.md
 
 ## How to run the project
 
-simply run P3_Log_Analysis.py with a compiler or in shell.
+```
+1.Download and unzip the data using the following link:
+  https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
+
+2.put the newsdata.sql extracted from downloaded zip in the same folder
+as P3_Log_Analysis.py or if you are using vagrant, place it into
+the vagrant directory
+
+3.to load the data, use the command psql -d news -f newsdata.sql.
+
+4.now the tables are created and populated with data, you can view the tables using psql -d news or run the script P3_Log_Analysis.py
+
+```
 
 ## Project detail
  
