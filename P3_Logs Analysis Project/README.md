@@ -13,7 +13,9 @@ python 3 and psycopg2 to access provided postgreSQL
 ## What is in the project
 
 P3_Log_Analysis.py
+
 output.txt
+
 README.md
 
 ## How to run the project
@@ -22,7 +24,7 @@ simply run P3_Log_Analysis.py with a compiler or in shell.
 
 ## Project detail
  
-###P3_Log_Analysis.py
+### P3_Log_Analysis.py
 
 ```
 	This file contains five functions with three of them being
