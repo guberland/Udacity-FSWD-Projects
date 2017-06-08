@@ -64,6 +64,8 @@ errorDay = ("CREATE VIEW normtraffic AS "
             "FROM normtraffic,badtraffic "
             "WHERE normtraffic.date=badtraffic.date "
             "AND faulty*100/norm >= 1")
+
+
 if __name__ == '__main__':
     print("1. What are the most popular three articles of all time? ")
     printView(executeQuery(topArticle))
@@ -73,4 +75,4 @@ if __name__ == '__main__':
     print('\n')
     print("3. On which days did more than 1% of requests lead to errors? ")
     printError(executeQuery(errorDay))
-print('\n')
+    print('\n')
