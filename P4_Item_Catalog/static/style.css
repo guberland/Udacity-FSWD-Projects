@@ -1,0 +1,62 @@
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #2d3c49;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #7d97ad;;
+    margin:10px 0 20px 0;
+}
+
+.container{
+    max-width:
+    margin:0 auto;
+    flex-wrap: wrap;
+}
+
+#logo {
+    max-width: 100px;
+    max-height: 150px;
+    margin: 20px 20px 10px 20px;
+    float:left;
+    flex-wrap: wrap;
+}
+
+.text-80{
+    font-size: 80px;
+}
+
+.text-thin{
+    font-weight: 300;
+}
+
+.text-grey{
+    color: #7d97ad;
+}
+
+.text-thick{
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px)
+{
+    #my-name{
+        font-size: 60px;
+    }
+    #my-title{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    #my-name{
+        font-size: 40px;
+    }
+    #my-title{
+        font-size: 25px;
+    }
+}
