@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}index~{% endblock%}
+
+{% block content %}
+    <h1> let the edit begin! </h1>
+
+    <form action= "{{url_for('editItem', ID=itemedit.ID)}}" method = 'POST'>
+
+    <p>Name:</p>
+    <input type = 'text' size='30' name = 'name' value='{{itemedit.name}}' placeholder = '{{itemedit.name}}'>
+    <br>
+    <br>
+    <input type = 'text' size='30' name = 'price' value='{{itemedit.price}}' placeholder = '{{itemedit.price}}'>
+    <br>
+    <br>
+    <textarea name = 'description' placeholder = '{{itemedit.description}}'>{{itemedit.description}}
+    </textarea>
+    <br>
+    <br>
+    <select id = "catagories" name="catagory">
+        {% for catagory in Catagories %}
+            <option value='{{catagory.name}}'> {{catagory.name}} </a> </h1>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    <input type='submit' value='Edit'>
+    </form>
+    <a href = "{{url_for('showItem')}}"> Cancel </a>
+{% endblock%}

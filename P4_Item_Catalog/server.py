@@ -33,37 +33,57 @@ def name():
 
 
 
-@app.route('/server/')
+@app.route('/main/')
 def showCatagory():
-    a = session.query(Catagories).all()
-    b = session.query(Item).all()
-    return render_template("index.html", Catagories=a,Item=b)
+    catagory = session.query(Catagories).all()
+    return render_template("layout.html", Catagories=catagory)
+
+@app.route('/main/items/')
+def showItem():
+    item = session.query(Item).all()
+    catagory = session.query(Catagories).all()
+    return render_template("index.html", Catagories=catagory,Item=item)
 
 
 
-
-@app.route('/server/create/<int:ID>',methods=['GET','POST'])    
-def createCatagory(ID):
-    catagoryCreated=Catagories(name="guberlake")
+@app.route('/main/items/create/<int:ID>',methods=['GET','POST'])    
+def createItem(ID):
+    itemCreated=Item(name="guberlake")
     if request.method=="POST":
-        session.add(catagoryCreated)
+        session.add(itemCreated)
         session.commit()
-        return redirect(url_for('showCatagory',ID=ID))
+        return redirect(url_for('showItem',ID=ID))
     else:
-        return render_template('create.html',catagorycreate=catagoryCreated)
+        return render_template('create.html',itemcreate=itemCreated)
 
 
-
-
-@app.route('/server/delete/<int:ID>',methods=['GET','POST'])    
-def deleteCatagory(ID):
-    catagoryDelete=session.query(Catagories).filter_by(ID=ID).one()
+@app.route('/main/items/edit/<int:ID>',methods=['GET','POST'])  
+def editItem(ID):
+    catagory = session.query(Catagories).all()
+    itemedited=session.query(Item).filter_by(ID=ID).one()
     if request.method=="POST":
-        session.delete(catagoryDelete)
-        session.commit()
-        return redirect(url_for('showCatagory',ID=ID))
+
+        itemedited.name=request.form['name']
+        itemedited.price=request.form['price']
+        itemedited.description=request.form['description']
+        itemedited.catagory_ID=request.form['catagory']
+            
+        return redirect(url_for('showItem',ID=ID))
     else:
-        return render_template('delete.html',catagorydelete=catagoryDelete)
+        return render_template('edit.html',Catagories=catagory,itemedit=itemedited)
+
+
+
+@app.route('/main/items/delete/<int:ID>',methods=['GET','POST'])    
+def deleteItem(ID):
+    catagory = session.query(Catagories).all()
+    itemDelete=session.query(Item).filter_by(ID=ID).one()
+    if request.method=="POST":
+        session.delete(itemDelete)
+        session.commit()
+        return redirect(url_for('showItem',ID=ID))
+    else:
+        return render_template('delete.html',Catagories=catagory,itemdelete=itemDelete)
 
 
 

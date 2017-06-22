@@ -5,20 +5,14 @@
 
 
 {% block content %}
-<div class="row">
 
-    <div class = "col-md-4">
-        {% for catagory in Catagories %}
-            <h1> {{catagory.name}} </h1>
-        {% endfor %}
-    </div>
     <div class = "col-md-8">
     {% for item in Item %}
         <h2> {{item.name}}   {{item.price}} </h2>
         <h4> {{item.description}} </h4>
         <h4> {{item.catagory_ID }} </h4>
-        <p> <a href = "{{url_for('deleteCatagory',ID=item.ID)}}">Delete</a> </p>
-        <p> <a href = "{{url_for('createCatagory',ID=item.ID)}}">Create</a> </p>
+        <p> <a href = "{{url_for('editItem',ID=item.ID)}}">Edit</a> </p>
+        <p> <a href = "{{url_for('deleteItem',ID=item.ID)}}">Delete</a> </p>
         <br>
         <br>
     {% endfor %}
