@@ -4,6 +4,7 @@
 
 {% block content %}
     <div class = "col-md-8">
+
         <h1> Are you sure you want to delete? </h1>
 
         <form action="#" method = 'post'>
@@ -15,7 +16,7 @@
 
         </form>
 
-        <a href = "{{url_for('showItem')}}"> Cancel </a>
+        <button onclick="goBack()"> Cancel </a>
     </div>
 {% endblock %}
 

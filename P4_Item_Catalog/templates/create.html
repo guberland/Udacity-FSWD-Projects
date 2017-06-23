@@ -3,16 +3,38 @@
 {% block title %}index~{% endblock%}
 
 {% block content %}
-    <h1> Are you sure you want to create? </h1>
+    <h1> let the creating begin! </h1>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
 
-    <form action="#" method = 'post'>
+            <ul>
+            {% for message in messages %}
+              <li><strong>{{message}}</strong></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+    <form action= "{{url_for('createItem')}}" method = 'POST'>
 
-    <input type='submit', value = 'Add'>
-
-
-
-
+    <p>Name:</p>
+    <input type = 'text' size='30' name = 'name' placeholder = 'enter the name'>
+    <br>
+    <br>
+    <input type = 'text' size='30' name = 'price' placeholder = 'enter the price'>
+    <br>
+    <br>
+    <textarea name = 'description'>
+    </textarea>
+    <br>
+    <br>
+    <select id = "catagories" name="catagory">
+        {% for catagory in Catagories %}
+            <option value='{{catagory.name}}'> {{catagory.name}} </option>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    <input type='submit' value='Create'>
     </form>
-
-    <a href = "{{url_for('showItem')}}"> Cancel </a>
+    <button onclick="goBack()"> Cancel </a>
 {% endblock%}

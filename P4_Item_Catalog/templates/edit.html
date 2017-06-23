@@ -19,13 +19,14 @@
     <br>
     <br>
     <select id = "catagories" name="catagory">
+        <option selected="itemedit.catagory_ID">{{itemedit.catagory_ID}}</option>
         {% for catagory in Catagories %}
-            <option value='{{catagory.name}}'> {{catagory.name}} </a> </h1>
+            <option value='{{catagory.name}}'> {{catagory.name}} </option>
         {% endfor %}
     </select>
     <br>
     <br>
     <input type='submit' value='Edit'>
     </form>
-    <a href = "{{url_for('showItem')}}"> Cancel </a>
+    <button onclick="goBack()"> Cancel </a>
 {% endblock%}
