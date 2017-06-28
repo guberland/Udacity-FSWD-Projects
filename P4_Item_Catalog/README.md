@@ -45,8 +45,8 @@ README.md
 ## How to run the project
 
 
-1.Download and unzip the data using the following link:
-  https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
+1.Download the project using the following link:
+  https://github.com/guberland/Udacity-FSWD-Projects/P4_Item_Catalog/
 
 2.extract everything in the same directory.
 
