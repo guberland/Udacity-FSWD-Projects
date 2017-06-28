@@ -1,48 +1,13 @@
 
-body{
+body {
     font-family: 'Tangerine', serif;
     color: #2d3c49;
     background-repeat: no-repeat;
 }
 
-#title_name{
-    font-size: 400%;
-}
-
-
-
-.container{
-    max-width:
-    margin:0 auto;
-    flex-wrap: wrap;
-    background-color: rgba(222,222,222,.80);
-    border-radius:15px;
-    border-style:double;
-}
-
-.center_text{
-    text-align: center;
-}
-#header{
-    background:beige;
-    outline: 7px solid brown;
-    padding:20px;
-}
-
-#category{
-    border-right-style: double;
-}
-
-#buttons{
-    font-size:30px;
-    padding: 10px 50px 0px 50px;
-    margin-top:80px;
-
-}
-
-#flash_message{
-    font-size:30px;
-    color: #B52000;
+a {
+    color:black;
+    margin:80px 12px 0 0;
 }
 
 a:hover {
@@ -51,20 +16,55 @@ a:hover {
     text-decoration: underline;
 }
 
-a {
-    color:black;
-    margin:80px 12px 0 0;
-}
 
-form{
+
+form {
     font-size:22px;
     font-family: "Times New Roman", Times, serif;
 
 }
 
-.goback
-{
+.goback {
     font-size:22px;
     font-family: "Times New Roman", Times, serif;
 }
+
+.container {
+    margin:0 auto;
+    flex-wrap: wrap;
+    background-color: rgba(222,222,222,.80);
+    border-radius:15px;
+    border-style:double;
+}
+
+.center_text {
+    text-align: center;
+}
+
+#title_name {
+    font-size: 400%;
+}
+
+#header {
+    background:beige;
+    outline: 7px solid brown;
+    padding:20px;
+}
+
+#category {
+    border-right-style: double;
+}
+
+#buttons {
+    font-size:30px;
+    padding: 10px 50px 0px 50px;
+    margin-top:80px;
+
+}
+
+#flash_message {
+    font-size:30px;
+    color: #B52000;
+}
+
 

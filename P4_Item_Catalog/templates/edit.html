@@ -8,6 +8,7 @@
     <form action= "{{url_for('editItem', ID=itemedit.ID)}}" method = 'POST'>
 
     <p>Name:</p>
+
     <input type = 'text' size='30' name = 'name' value='{{itemedit.name}}' placeholder = '{{itemedit.name}}'>
     <br>
     <br>
@@ -18,6 +19,7 @@
     </textarea>
     <br>
     <br>
+
     <select id = "categories" name="category">
         <option selected="itemedit.category_ID">{{itemedit.category_ID}}</option>
         {% for category in Categories %}
@@ -26,10 +28,12 @@
             {% endif %}
         {% endfor %}
     </select>
+
     <br>
     <br>
     <input type='submit' value='Edit'>
     </form>
+
     <br>
     <button class="goback" onclick="goBack()"> Cancel </a>
 {% endblock%}

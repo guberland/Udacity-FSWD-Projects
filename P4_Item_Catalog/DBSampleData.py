@@ -1,16 +1,3 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
-from database import Base, Categories, Item, User
-
-engine = create_engine('sqlite:///itemCatelog.db')
-Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
-
-
-
-
 SampleCategory=('Attack Damage',
                 'Attack Speed',
                 'Life Steal',
@@ -74,8 +61,4 @@ SampleItem=[('Infinity Edge','3400',
              'any. Somehow, it is the favourite dish among the '
              'Italian Plumbers.',
              'Ability Damage',"guberland"),
-
-                ]
-
-        
-      
+            ]
