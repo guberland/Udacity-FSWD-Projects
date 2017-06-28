@@ -105,6 +105,8 @@ Chao Jiang
 
 ## Acknowledgments
 -Gconnect(),Gdisconnect()  (Udacity Restaurant Menu project)
+
 -League of Legend/Dota item description 
+
 -background image
 
