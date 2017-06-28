@@ -1,54 +1,93 @@
-# P3_Logs Analysis Project
+# P4_Item_Catalog_Project
 
-This is the third Undacity Full Stack Nanodegree project, the project 
-executes queries and output the answers to the following questions:
-1. What are the most popular three articles of all time?
-2. Who are the most popular article authors of all time?
-3. On which days did more than 1% of requests lead to errors?  
+This is the forth Undacity Full Stack Nanodegree project, this project creates
+an application that provides a list of items within a variety of categories as 
+well as provide a user registration and authentication system. Registered users 
+will have the ability to post, edit and delete their own items.
 
 ## Prerequisites
 
-python 3 and psycopg2 to access provided postgreSQL
+python 3 with Flask and Sqlalchemy
 
 ## What is in the project
 
-P3_Log_Analysis.py
+server.py
 
-output.txt
+DBSampleData.py
 
+database.py
+
+client_secrets.JSON
+
+templates/
+ 	-layout.html
+ 
+ 	-index.html
+ 
+ 	-create.html
+ 
+ 	-delete.html
+ 
+ 	-edit.html
+ 
+ 	-login.html
+	
+static/
+	-bootstrap.css
+	-bootstrap.min.css
+	-bootstrap-theme.css
+	-bootstrap-theme.min.css
+	-style.css
+	-Wiki-background.jpg
+	
 README.md
 
 ## How to run the project
 
-```
+
 1.Download and unzip the data using the following link:
   https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 
-2.put the newsdata.sql extracted from downloaded zip in the same folder
-  as P3_Log_Analysis.py or if you are using vagrant, place it into
-  the vagrant directory
+2.extract everything in the same directory.
 
-3.to load the data, use the command psql -d news -f newsdata.sql.
+3.use command -python server.py to run the program.
 
-4.now the tables are created and populated with data, you can view the tables using 
-  psql -d news or run the script P3_Log_Analysis.py
+4.open the web browser and type in http://localhost:5000/category/ to view the program.
 
-```
+
 
 ## Project detail
  
-### P3_Log_Analysis.py
+### Server.py
 
-```
-	This file contains three functions:
+	there are mainly four parts in this file:
+		1.initial DB setup
+		2.Google Oauth2 authentication (gconnect(),gdisconnect() are directly from
+		Udacity Restaurant Menu project with minor changes to ensure them working properly)
+		3.CRUD implementation using Flask and Sqlalchemy
+		4.JSON endpoint implementation
 
-	executeQuery() takes an SQL query as a parameter. Executes the query and 
-	returns the results as a list of tuples
+### database.py
 
-	printView() and printError() are helper functions that modify the output
-	of the queries into more human readable result.
+	the database file which contains three tables:
+		1.user(ID,name)
+		2.categories(ID,name)
+		3.item((ID,name,description,price,category_ID,user_ID )
+		
+### DBSampleData.py
 
-```
+	the database file which contains two entries which will populate our database with
+	data of League of Legend/Dota Items.
+	
+### templates/ and static/
+
+	the HTML and CSS as well as background image files used for this project.(the background
+	image file is from the Internet)
+
+	
+
+
+
 
 
 ## Built With
@@ -63,4 +102,9 @@ https://github.com/guberland/Udacity-FSWD-Projects
 ## Authors
 
 Chao Jiang
+
+## Acknowledgments
+-Gconnect(),Gdisconnect()  (Udacity Restaurant Menu project)
+-League of Legend/Dota item description 
+-background image
 
