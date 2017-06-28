@@ -1,62 +1,70 @@
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Tangerine', serif;
     color: #2d3c49;
+    background-repeat: no-repeat;
 }
 
-hr {
-    border: none;
-    height: 5px;
-    background-color: #7d97ad;;
-    margin:10px 0 20px 0;
+#title_name{
+    font-size: 400%;
 }
+
+
 
 .container{
     max-width:
     margin:0 auto;
     flex-wrap: wrap;
+    background-color: rgba(222,222,222,.80);
+    border-radius:15px;
+    border-style:double;
 }
 
-#logo {
-    max-width: 100px;
-    max-height: 150px;
-    margin: 20px 20px 10px 20px;
-    float:left;
-    flex-wrap: wrap;
+.center_text{
+    text-align: center;
+}
+#header{
+    background:beige;
+    outline: 7px solid brown;
+    padding:20px;
 }
 
-.text-80{
-    font-size: 80px;
+#category{
+    border-right-style: double;
 }
 
-.text-thin{
-    font-weight: 300;
+#buttons{
+    font-size:30px;
+    padding: 10px 50px 0px 50px;
+    margin-top:80px;
+
 }
 
-.text-grey{
-    color: #7d97ad;
+#flash_message{
+    font-size:30px;
+    color: #B52000;
 }
 
-.text-thick{
-    font-weight: 400;
+a:hover {
+    font-weight: 900;
+    font-size: larger;
+    text-decoration: underline;
 }
 
-@media screen and (max-width: 800px)
+a {
+    color:black;
+    margin:80px 12px 0 0;
+}
+
+form{
+    font-size:22px;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.goback
 {
-    #my-name{
-        font-size: 60px;
-    }
-    #my-title{
-        font-size: 30px;
-    }
+    font-size:22px;
+    font-family: "Times New Roman", Times, serif;
 }
 
-@media screen and (max-width: 420px)
-{
-    #my-name{
-        font-size: 40px;
-    }
-    #my-title{
-        font-size: 25px;
-    }
-}

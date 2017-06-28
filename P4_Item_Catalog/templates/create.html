@@ -1,19 +1,9 @@
 {% extends "layout.html" %}
 
-{% block title %}index~{% endblock%}
+{% block title %}create{% endblock%}
 
 {% block content %}
-    <h1> let the creating begin! </h1>
-    {% with messages = get_flashed_messages() %}
-            {% if messages %}
-
-            <ul>
-            {% for message in messages %}
-              <li><strong>{{message}}</strong></li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-            {% endwith %}
+    <h1> It's Alive! It's ALIVE!  </h1>
     <form action= "{{url_for('createItem')}}" method = 'POST'>
 
     <p>Name:</p>
@@ -27,14 +17,15 @@
     </textarea>
     <br>
     <br>
-    <select id = "catagories" name="catagory">
-        {% for catagory in Catagories %}
-            <option value='{{catagory.name}}'> {{catagory.name}} </option>
+    <select id = "categories" name="category">
+        {% for category in Categories %}
+            <option value='{{category.name}}'> {{category.name}} </option>
         {% endfor %}
     </select>
     <br>
     <br>
     <input type='submit' value='Create'>
     </form>
-    <button onclick="goBack()"> Cancel </a>
+    <br>
+    <button class="goback" onclick="goBack()"> Cancel </a>
 {% endblock%}

@@ -7,18 +7,32 @@ from sqlalchemy import create_engine
 
 Base=declarative_base()
 
-
+class User(Base):
     
-class Catagories(Base):
-    
-    __tablename__ = 'catagories'
+    __tablename__ = 'user'
     ID = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    
     @property
     def serialize(self):
         return{
         'ID':self.ID,
-        'name':self.name,
+        'name':self.name
+        }
+        
+        
+class Categories(Base):
+    
+    __tablename__ = 'categories'
+    ID = Column(Integer, primary_key=True)
+    name = Column(String(250), nullable=False)
+
+    
+    @property
+    def serialize(self):
+        return{
+        'ID':self.ID,
+        'name':self.name
         }
 
     
@@ -30,8 +44,10 @@ class Item(Base):
     name = Column(String(250), nullable=False)
     description = Column(String(250))
     price = Column(String(8))
-    catagory_ID = Column(Integer,ForeignKey('catagories.ID'))
-    catagory = relationship(Catagories)
+    category_ID = Column(Integer,ForeignKey('categories.ID'))
+    category = relationship(Categories)
+    user_ID = Column(Integer,ForeignKey('user.ID'))
+    user = relationship(User)
 
     @property
     def serialize(self):
@@ -40,12 +56,12 @@ class Item(Base):
         'name':self.name,
         'description':self.description,
         'price':self.price,
-        'catagory_ID':self.catagory_ID}
+        'category_ID':self.category_ID,
+        'user_ID':self.user_ID}
 
 
 
-engine = create_engine('sqlite:///itemCatalog.db')
-
+engine = create_engine('sqlite:///itemCatelog.db')
 Base.metadata.create_all(engine)
 
 

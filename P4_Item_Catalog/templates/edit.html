@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 
-{% block title %}index~{% endblock%}
+{% block title %}edit{% endblock%}
 
 {% block content %}
-    <h1> let the edit begin! </h1>
+    <h1> Do you feel lucky? </h1>
 
     <form action= "{{url_for('editItem', ID=itemedit.ID)}}" method = 'POST'>
 
@@ -18,15 +18,18 @@
     </textarea>
     <br>
     <br>
-    <select id = "catagories" name="catagory">
-        <option selected="itemedit.catagory_ID">{{itemedit.catagory_ID}}</option>
-        {% for catagory in Catagories %}
-            <option value='{{catagory.name}}'> {{catagory.name}} </option>
+    <select id = "categories" name="category">
+        <option selected="itemedit.category_ID">{{itemedit.category_ID}}</option>
+        {% for category in Categories %}
+            {% if not category.name==itemedit.category_ID %}
+            <option value='{{category.name}}'> {{category.name}} </option>
+            {% endif %}
         {% endfor %}
     </select>
     <br>
     <br>
     <input type='submit' value='Edit'>
     </form>
-    <button onclick="goBack()"> Cancel </a>
+    <br>
+    <button class="goback" onclick="goBack()"> Cancel </a>
 {% endblock%}

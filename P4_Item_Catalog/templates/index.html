@@ -5,14 +5,28 @@
 
 
 {% block content %}
+<script>
+        var hidden = false;
+    function action() {
+        hidden = !hidden;
+        if(hidden) {
 
+        } else {
+            document.getElementsByClassName("toggle_button").style.visibility = 'visible';
+        }
+    }
+</script>
     <div class = "col-md-8">
+
+
     {% for item in Item %}
-        <h2> {{item.name}}   {{item.price}} </h2>
-        <h4> {{item.description}} </h4>
-        <h4> {{item.catagory_ID }} </h4>
-        <p> <a href = "{{url_for('editItem',ID=item.ID)}}">Edit</a> </p>
-        <p> <a href = "{{url_for('deleteItem',ID=item.ID)}}">Delete</a> </p>
+        <h1 class=center_text> {{item.name}}</h1>
+        <h2> price:{{item.price}} </h2>
+        <h3 class=center_text> {{item.description}} </h3>
+        <br>
+        <br>
+        <h3 class="toggle_button"> <a href = "{{url_for('editItem',ID=item.ID)}}">Edit</a> </h3>
+        <h3 class="toggle_button"> <a href = "{{url_for('deleteItem',ID=item.ID)}}">Delete </a></h3>
         <br>
         <br>
     {% endfor %}
