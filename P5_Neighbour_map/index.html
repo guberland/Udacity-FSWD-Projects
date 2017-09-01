@@ -36,34 +36,21 @@
                         <li data-bind = "text: name"></li>
                     </ul> -->
                     <div data-bind='template: { foreach: locationToshow}'>
-                        <div data-bind='attr:{ "class": "location"+ type }, text:name'></div>
+                        <li><button data-bind=' text: name, click :runthis'></button></li>
                     </div>
                 <!-- </div> -->
             </div>
         </div>
 
 
-     <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat:  49.155, lng: -123.132},
-          zoom: 8
-        });
-        var tribeca = {lat:  49.155, lng: -123.132};
-      var marker = new google.maps.Marker({
-            position: tribeca,
-            map:map,
-            title:'my house!'});
-      }
-    </script>
+     <div id="map" >this should be an error message if the map didnt load</div>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9XW-feEIgGBabXNEKDdD48kZAbjQvhOA&callback=initMap"
     async defer></script>
     <script src="knockout-3.4.2.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="POI_list.js"></script>
-    <script src="hamburger.js"></script>
+
 
   </body>
 </html>
