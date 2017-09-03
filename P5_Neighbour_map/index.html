@@ -24,9 +24,12 @@
     <header>
 <!--         <button class="hamburger">&#9776;</button>
         <button class="cross">&#735;</button> -->
-        <label><input type='radio' name="type" value='one' data-bind='checked: typeToShow' />one</label>
-        <label><input type='radio' name="type" value='two' data-bind='checked: typeToShow' />two</label>
-        <label><input type='radio' name="type" value='all' data-bind='checked: typeToShow' />all</label>
+        <label><input type='radio' name="type" value='one' data-bind='checked: typeToShow,
+        checked: renderMarker' />one</label>
+        <label><input type='radio' name="type" value='two' data-bind='checked: typeToShow,
+        checked: renderMarker'' />two</label>
+        <label><input type='radio' name="type" value='all' data-bind='checked: typeToShow,
+        checked: renderMarker'' />all</label>
     </header>
 
         <div class = "container">
