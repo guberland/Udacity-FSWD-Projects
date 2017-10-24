@@ -1,63 +1,45 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-<header><h1 id="title">Vancouver Tourmap</h1></header>
-
+    <head>
+        <title>Vancouver Tourmap</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Vancouver Tourmap</h1>
+        </header>
         <div id="wrapper">
-                  <div id="sidebar-wrapper" >
-
-
-
-
-           <ul class="sidebar-nav">
-
-                          <div data-bind='template: { foreach: locations}' class="sidebar-nav">
-                              <li><button class="locations" data-bind=' text: name, click:name,click :$parent.centerMarker'></button></li>
+            <div id="sidebar-wrapper" >
+                <ul class="sidebar-nav">
+                    <div data-bind='template: { foreach: locations}' class="sidebar-nav">
+                        <li>
+                            <button class="locations" data-bind=' text: name, click:name,click :$parent.centerMarker'>
+                            </button>
+                        </li>
                     </div>
-                  </ul>
+                </ul>
+            </div>
+
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
+            <input type="search" id="search-bar" placeholder="Enter a place" data-bind="value:query,valueUpdate: 'keyup'">
         </div>
 
+        <div id="map" >this should be an error message if the map didnt load</div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9XW-feEIgGBabXNEKDdD48kZAbjQvhOA&callback=initMap"
+        async defer></script>
 
-<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
-           <input type="search" id="search-bar" placeholder="Enter a place" data-bind="value:query,valueUpdate: 'keyup'">
-</div>
-     <div id="map" >this should be an error message if the map didnt load</div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9XW-feEIgGBabXNEKDdD48kZAbjQvhOA&callback=initMap"
-    async defer></script>
-    <script src="js/knockout-3.4.2.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/POI_list.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-  </body>
+        <script src="js/knockout-3.4.2.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </body>
 </html>
