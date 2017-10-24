@@ -42,14 +42,13 @@ README.md
 ## API
  
 ### Google Map API
-
 	The Google Map API is used here to generate the map and markers as well as th corresponding Info Windows,
-the location list used is currently hardcoded into the App.js file as locations[]
+	the location list used is currently hardcoded into the App.js file as locations[]
 	
 ### Flickr
 
 	Each markers will send ajax request to flickr then retrieve and display 2 (or the value of i in populateInfoWindow)
-recent photos of the corresponding marker	
+	recent photos of the corresponding marker	
 
 
 ## Built With
