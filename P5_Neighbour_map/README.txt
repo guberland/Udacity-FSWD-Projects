@@ -29,7 +29,8 @@ README.md
 ## How to run the project
 
 
-1.Download the project using the following link:
+1.run the live sample here! https://guberland.github.io/Udacity-FSWD-Projects/P5_Neighbour_map/
+  or download the project using the following link:
   https://github.com/guberland/Udacity-FSWD-Projects/tree/master/P5_Neighbour_map
 
 2.open index.html with the browser of your choice
