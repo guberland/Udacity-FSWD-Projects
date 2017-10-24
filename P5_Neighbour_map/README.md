@@ -69,5 +69,5 @@ Chao Jiang
 
 -Sidebar referenced from https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
 
-
+-live search with KO js https://opensoul.org/2011/06/23/live-search-with-knockoutjs/
 
