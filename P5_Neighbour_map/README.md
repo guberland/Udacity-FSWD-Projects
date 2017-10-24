@@ -13,8 +13,7 @@ Knockout Js,Jquery,Bootstrap
 index.html
 
 css/
- 	-bootstrap.min.css
- 
+ 	-bootstrap.min.css	
  	-style.css
  
 js/
