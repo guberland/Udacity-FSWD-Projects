@@ -67,7 +67,9 @@ Chao Jiang
 
 ## Acknowledgments
 -Udacity and its Forum, stackoverflow.com, developer/google.com flickr/developer
+
 -w3resource for flickr API request (https://www.w3resource.com/API/flickr/tutorial.php)
+
 -Sidebar referenced from https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
 
 
