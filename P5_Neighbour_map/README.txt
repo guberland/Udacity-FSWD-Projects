@@ -30,7 +30,7 @@ README.md
 
 
 1.Download the project using the following link:
-  ???
+  https://github.com/guberland/Udacity-FSWD-Projects/tree/master/P5_Neighbour_map
 
 2.open index.html with the browser of your choice
 
@@ -59,7 +59,7 @@ SubLime (HTML,CSS,JS)
 
 ## Versioning
 
-https://github.com/guberland/Udacity-FSWD-Projects
+https://github.com/guberland/Udacity-FSWD-Projects/tree/master/P5_Neighbour_map
 
 ## Authors
 
