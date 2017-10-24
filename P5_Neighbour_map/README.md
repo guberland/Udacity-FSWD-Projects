@@ -32,21 +32,21 @@ README.md
   or download the project using the following link:
   https://github.com/guberland/Udacity-FSWD-Projects/tree/master/P5_Neighbour_map
 
-2.open index.html with the browser of your choice
+2.open index.html with the browser of your choice.
 
-3.click menu to see the location list
+3.click menu to see the location list.
 
 4.click either markers on the map or location list to view the
-  information and recent 2 pictures from flickr of the specified location
+  information and recent 2 pictures from flickr of the specified location.
   
 ## API
  
 ### Google Map API
-   The Google Map API is used here to generate the map and markers as well as th corresponding Info Windows,the location list used is currently hardcoded into the App.js file as locations[]
+   The Google Map API is used here to generate the map and markers as well as th corresponding Info Windows,the location list used is currently hardcoded into the App.js file as locations[].
 	
 ### Flickr
 
-   Each markers will send ajax request to flickr then retrieve and display 2 (or the value of i in populateInfoWindow) recent photos of the corresponding marker	
+   Each markers will send ajax request to flickr then retrieve and display 2 (or the value of i in populateInfoWindow) recent photos of the corresponding marker. (the photos will not be displayed if the screen has a width less than 400px.)	
 
 
 ## Built With
