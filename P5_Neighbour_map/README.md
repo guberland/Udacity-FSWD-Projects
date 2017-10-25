@@ -21,7 +21,9 @@ js/
 	-bootstrap.bundle.min.js
 	-jquery-3.2.1.min.js
 	-knockout-3.4.2.js
-	
+
+pic/
+	-fail.jpg
 	
 README.md
 
@@ -70,4 +72,6 @@ Chao Jiang
 -Sidebar referenced from https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
 
 -live search with KO js https://opensoul.org/2011/06/23/live-search-with-knockoutjs/
+
+-fail image- Mr.Meeseek from Rick and Morty
 
