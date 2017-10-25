@@ -80,7 +80,7 @@ function renderMarker() {
         map.fitBounds(bounds);
 
         marker.addListener("click", clickMarker);
-    };
+    }
 
     google.maps.event.addDomListener(window, "resize", function() {
         map.fitBounds(bounds);
@@ -110,7 +110,7 @@ function renderMarker() {
             $.getJSON(url + "&format=json&jsoncallback=?", function(data) {
                 $.each(data.photos.photo, function(i, item) {
                     src += "<img src = \"http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg\">";
-                    infoContent = '<div class="title">' + marker.name + "</div><hr>" + "<p>" + marker.content + "</p>" + src + "<hr>"
+                    infoContent = '<div class="title">' + marker.name + "</div><hr>" + "<p>" + marker.content + "</p>" + src + "<hr>";
                     infowindow.setContent(infoContent);
                     console.log(src);
                     if (i == 1) return false;
@@ -128,7 +128,7 @@ function renderMarker() {
     }
 }
 function googleError(){
-    window.alert("failed to load Google Map")
+    window.alert("failed to load Google Map");
 }
 //Knockout Binding
 var viewModel = new ViewModel();
