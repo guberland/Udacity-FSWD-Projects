@@ -67,11 +67,11 @@ Chao Jiang
 ## Acknowledgments
 -Udacity and its Forum, stackoverflow.com, developer/google.com flickr/developer
 
--w3resource for flickr API request (https://www.w3resource.com/API/flickr/tutorial.php)
+-W3resource for flickr API request (https://www.w3resource.com/API/flickr/tutorial.php)
 
 -Sidebar referenced from https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
 
--live search with KO js https://opensoul.org/2011/06/23/live-search-with-knockoutjs/
+-Live search with KO js https://opensoul.org/2011/06/23/live-search-with-knockoutjs/
 
--fail image- Mr.Meeseek from Rick and Morty
+-Fail image- Mr.Meeseek from Rick and Morty
 
