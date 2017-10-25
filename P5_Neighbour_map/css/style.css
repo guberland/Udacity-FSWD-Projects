@@ -4,6 +4,10 @@
     transition: all 0.5s ease;
 }
 
+#fail {
+    width:100%;
+}
+
 #map {
     height: 100%;
 }
@@ -63,6 +67,11 @@ html, body {
     color: white;
 }
 
+.title{
+    font-size:large;
+    font-weight:700;
+
+}
 .locations {
     padding: 0;
     border: none;
@@ -116,7 +125,7 @@ html, body {
     background: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     #images{
         display: none;
     }
